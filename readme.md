@@ -1,19 +1,21 @@
 # Sequence Diagrams
 
-[**Sequence diagrams**](https://bramp.github.io/js-sequence-diagrams/?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_library) show a hypothetical chronology of messages exchanged between a number of participants. Use Sequence Diagrams to communicate to team members how the back end services communicate with each other to service user request. 
+[**Sequence diagrams**](https://bramp.github.io/js-sequence-diagrams/?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_library) show a hypothetical exchange of messages between a number of participants. Use Sequence Diagrams to communicate how the back end services communicate with each other to service user requests. 
 
-For example, the sequence diagram representing "a user successfully adds a key to a key vault" would consist of a 
- * **title** "Store Github Key"
- * **participants** represented as blocks `user` and `key-vault` and
- * arrows connecting the blocks annotated with 
+For example, the sequence diagram for "a user successfully adds a key to a key vault" would be:
+
+![Image](./media/save-github-key.png)
+
+It consists of a 
+ * **title** : "Store Github Key"
+ * **participants** : Participants are represented as blocks `cli` and `key-vault` and
+ * **arrows** : Arrows connect the blocks annotated with 
     * `put(PAT)` for "put access token" and in the reverse direction
     * `kv-id` for "key vault id".
 
-![Image](./media/save-github-key.jpg)
-
 # Representation
 
-Sequence Diagrams are encoded as a single http document which wraps a sequence of div statements in boilerplate. For example, the above "Store GitHub Key" is created from [store-github-key.html](./store-github-key.html) which is inlined here:
+Sequence Diagrams are encoded as a single http document which wraps a sequence of `div` statements in boilerplate. For example, the above "Store GitHub Key" is created from [store-github-key.html](./store-github-key.html) which is inlined here:
 
 ```html
 <!DOCTYPE html>
